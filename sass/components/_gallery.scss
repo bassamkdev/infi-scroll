@@ -1,0 +1,53 @@
+.gallery {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  padding: 3rem;
+  padding-top: 5rem;
+  background-color: whitesmoke;
+  text-align: center;
+  box-shadow: 0 0 1rem 0px rgba($color-black, 0.5);
+  @include respond(tab-land) {
+    width: 70%;
+    box-shadow: none;
+    padding: 1rem;
+    padding-top: 12rem;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+    box-shadow: none;
+    padding: 1rem;
+    padding-top: 10rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    box-shadow: none;
+    padding: 1rem;
+    padding-top: 10rem;
+  }
+}
+.gallery-card {
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  box-shadow: 0 0 3rem 1px rgba($color-black, 0.5);
+  border-radius: 3px;
+
+  @include respond(phone) {
+    width: 95%;
+    box-shadow: 0 0 1rem 0px rgba($color-black, 0.5);
+    margin-bottom: 2rem;
+  }
+  @include respond(tab-port) {
+    width: 95%;
+    box-shadow: 0 0 1rem 0px rgba($color-black, 0.5);
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+  &__text {
+  }
+}
