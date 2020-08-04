@@ -5,43 +5,28 @@ body {
 }
 
 .header {
-  color: $color-black;
-  font-family: "Lobster", cursive;
-  font-size: 5rem;
-  letter-spacing: 0.9rem;
-  text-align: left;
   position: fixed;
-  top: 2rem;
-  left: 2rem;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  text-align: left;
+  text-shadow: none;
   padding: 1rem 2rem;
-  display: inline-block;
-  text-shadow: 0 1rem 2rem rgba($color-black, 0.5);
-  @include respond(phone) {
-    background-color: whitesmoke;
-    width: 100%;
-    text-align: center;
-    text-shadow: none;
-    padding: 1rem 0;
-    top: 0;
-    left: 0;
-  }
-  @include respond(tab-port) {
-    background-color: whitesmoke;
-    width: 100%;
-    text-align: center;
-    text-shadow: none;
-    padding: 1rem 0;
-    top: 0;
-    left: 0;
-  }
-  @include respond(tab-land) {
-    background-color: whitesmoke;
-    width: 100%;
-    text-align: center;
-    text-shadow: none;
-    padding: 1rem 0;
-    top: 0;
-    left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  z-index: 100;
+  border-bottom: 1px solid #7777;
+
+  &__text {
+    color: $color-black;
+    font-family: "Lobster", cursive;
+    font-size: 5rem;
+    letter-spacing: 0.9rem;
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -49,5 +34,6 @@ body {
   font-family: "Lato", sans-serif;
   text-align: left;
   font-size: 2rem;
-  margin-top: 1rem;
+  //
+  //letter-spacing: 0.5rem;
 }

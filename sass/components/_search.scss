@@ -1,0 +1,38 @@
+.search {
+  &__icon {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+
+    &:hover {
+      color: #777;
+      cursor: pointer;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+
+  &__input {
+    padding: 2rem 3rem;
+    border-radius: 5rem;
+    border: 2px solid #777;
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10rem);
+    transition: all 0.3s;
+    &:focus {
+      outline: none;
+    }
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-4rem);
+      @include respond(phone) {
+        transform: translate(-60%, 7rem);
+      }
+    }
+  }
+}

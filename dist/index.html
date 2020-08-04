@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>infiScroll</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="" />
+  </head>
+  <body>
+    <main class="home">
+      <div class="header">
+        <h1 class="header__text">infiScroll</h1>
+        <div class="search">
+          <lable class="search__icon" id="searchIcon" for="searchInput">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </lable>
+          <input
+            id="searchInput"
+            placeholder="nature, football, etc"
+            name="search"
+            type="text"
+            class="search__input"
+          />
+        </div>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="loader" id="loader">
+          <img
+            src="../img/spinner.svg"
+            alt="loading..."
+            class="loader__spinner"
+          />
+        </div>
+        <div class="error" id="errorHandler" hidden>
+          <h1 class="error__text">
+            Oops, nothing found, try again
+          </h1>
+          <i class="far fa-frown error__text-emoji"></i>
+        </div>
+      </div>
+    </main>
+    <!-- scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>

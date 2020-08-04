@@ -1,35 +1,35 @@
 .gallery {
   position: relative;
-  display: inline-block;
-  width: 40%;
-  padding: 3rem;
-  padding-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5rem;
+  margin-top: 8rem;
   background-color: whitesmoke;
-  text-align: center;
-  box-shadow: 0 0 1rem 0px rgba($color-black, 0.5);
   @include respond(tab-land) {
-    width: 70%;
+    width: 100%;
     box-shadow: none;
     padding: 1rem;
-    padding-top: 12rem;
   }
   @include respond(tab-port) {
     width: 100%;
     box-shadow: none;
     padding: 1rem;
-    padding-top: 10rem;
   }
   @include respond(phone) {
     width: 100%;
     box-shadow: none;
-    padding: 1rem;
-    padding-top: 10rem;
+    padding: 5px;
+    margin-top: 5rem;
+    padding-top: 2rem;
   }
 }
 .gallery-card {
-  display: inline-block;
-  width: 90%;
-  margin-bottom: 4rem;
+  display: block;
+  width: 50rem;
+  margin: 3rem;
   padding: 2rem;
   box-shadow: 0 0 3rem 1px rgba($color-black, 0.5);
   border-radius: 3px;
@@ -37,16 +37,44 @@
   @include respond(phone) {
     width: 95%;
     box-shadow: 0 0 1rem 0px rgba($color-black, 0.5);
-    margin-bottom: 2rem;
+    padding: 5px;
+    margin: 1rem;
   }
   @include respond(tab-port) {
-    width: 95%;
+    width: 90%;
     box-shadow: 0 0 1rem 0px rgba($color-black, 0.5);
     margin-bottom: 2rem;
   }
 
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  &__view {
+    font-size: 3rem;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.1);
+      color: $color-black;
+    }
+  }
+
   &__image {
-    width: 100%;
+    width: 46rem;
+    height: 46rem;
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+      height: auto;
+    }
   }
   &__text {
   }
